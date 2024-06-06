@@ -252,7 +252,7 @@ func (mi *StorageInitializerInjector) InjectStorageInitializer(pod *v1.Pod) erro
 				MountPath: constants.DefaultModelLocalMountPath,
 				// only path to volume's root ("") or folder is supported
 				SubPath:  pvcPath,
-				ReadOnly: true,
+				ReadOnly: false,
 			}
 
 			// Check if PVC source URIs is already mounted
